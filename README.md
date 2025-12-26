@@ -1,6 +1,6 @@
 # Antigravity Check Quota Script (配额查询脚本)
 
-这是一个独立的工具，旨在从运行中的 Codeium 进程（例如 VS Code）直接获取并显示您的 Codeium 配额、套餐状态和模型使用情况。
+这是一个独立的工具，旨在从运行中的 Antigravity 进程，直接获取并显示您的 Antigravity 配额、套餐状态和模型使用情况。
 
 ## 🚀 运行命令
 
@@ -73,7 +73,7 @@ pnpm build
 
 ## ❓ 常见问题 (Troubleshooting)
 
-- **未找到进程 (No process found)**: 请确保您的 IDE（安装了 Codeium）正在运行且未被休眠。
+- **未找到进程 (No process found)**: 请确保您的 IDE（安装了 Antigravity）正在运行且未被休眠，并且登录了正常的账号。
 - **所有候选进程均未发现端口**: 
   - 脚本依赖 `lsof` (macOS/Linux) 或 `netstat/wmic` (Windows)。
   - 在 macOS/Linux 上，如果遇到权限问题，可以尝试使用 `sudo pnpm start`（通常不需要）。
