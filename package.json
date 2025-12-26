@@ -1,0 +1,22 @@
+{
+  "name": "antigravity-check-quota",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/check-quota.ts",
+    "build": "tsup src/check-quota.ts --format cjs --out-dir dist --clean --minify",
+    "start:prod": "node dist/check-quota.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.3.3"
+  }
+}

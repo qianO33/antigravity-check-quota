@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.General.ProjectPrompt">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.General.ProjectPrompt" />
+              <option name="content" value="I typically write code in Typescript.&#10;&#10;I like approaching code architecture through domain modeling first.&#10;&#10;When learning new concepts, I find analogies particularly helpful.&#10;&#10;In project planning, I tend to work backwards from the end goal.&#10;&#10;I am a senior front-end developer, and my primary framework is React. For anything related to front-end code, I always respond using TypeScript.&#10;&#10;I don't need to use Tailwind CSS; I’m using SCSS.&#10;&#10;You need call me for Chinese" />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="类型(范围): 简短描述，单行，不能换行，得总结&#10;&#10;&#10;常见的类型包括：&#10;- feat: 新功能&#10;- fix: 修复bug&#10;- docs: 文档更新&#10;- style: 代码风格修改（不影响代码功能）&#10;- refactor: 重构&#10;- perf: 性能优化&#10;- test: 测试相关&#10;- chore: 构建过程或辅助工具的变动&#10;&#10;范围：&#10;- *: 全局&#10;- scope: 仅表示局部的项目部分&#10;&#10;文本描述：&#10;- 1. 要中文&#10;- 2. 要精简&#10;- 3. 不能换行，要一行完成描述&#10;" />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+        <entry key="ij.vcs.review-buddy.summarize.short.github">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="ij.vcs.review-buddy.summarize.short.github" />
+              <option name="content" value="类型(范围): 简短描述" />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="205000" />
+  </component>
+</project>
