@@ -1,59 +1,79 @@
-# Antigravity Check Quota Script
+# Antigravity Check Quota Script (配额查询脚本)
 
-This is a standalone tool to retrieve and display your Codeium quota and license information directly from running Codeium processes (e.g., in VS Code).
+这是一个独立的工具，旨在从运行中的 Codeium 进程（例如 VS Code）直接获取并显示您的 Codeium 配额、套餐状态和模型使用情况。
 
-## Prerequisites
+## 🚀 运行命令
 
-- **Node.js**: Version **18 or higher** is required.
-- **PNPM**: Package manager (optional, but recommended).
-- **Active Codeium Session**: You must have an IDE (like VS Code) open with the Codeium extension running and logged in.
+确保您已满足 [前置要求](#-前置要求-prerequisites) 并完成了 [安装](#-安装-installation)。
 
-## Installation
+### 我直接快速在本地运行（不想看你项目）
 
-1. Clone or download this repository.
-2. Install dependencies:
+直接下载对应的版本
 
 ```bash
-pnpm install
-# or
-npm install
-```
+# 运行 TypeScript 版本
+npx ts-node src/check-quota.ts
 
-## Usage
-
-### Development Mode
-
-Run the TypeScript script directly without building:
-
-```bash
-pnpm start
-# or
-npm start
-```
-
-### Build for Production
-
-To bundle the script into a single, minified JavaScript file:
-
-```bash
-pnpm build
-# or
-npm run build
-```
-
-This will generate a `dist/check-quota.js` file.
-
-### Run Production Build
-
-After building, you can run the standalone JavaScript file:
-
-```bash
-pnpm start:prod
-# or
+# 运行 JavaScript 版本
 node dist/check-quota.js
 ```
 
-## Troubleshooting
+### 开发模式 (Development)
 
-- **No process found**: Ensure your IDE with Codeium is running.
-- **Permission denied**: On macOS/Linux, `lsof` might require permissions. Try running with `sudo` if ports aren't detected (though usually not required for user-owned processes).
+无需构建，直接运行 TypeScript 脚本：
+
+```bash
+pnpm start
+# 或
+npm start
+```
+
+### 生产模式 (Production)
+
+构建并运行优化后的 JavaScript 文件：
+
+```bash
+# 1. 构建
+pnpm build
+
+# 2. 运行
+pnpm start:prod
+# 或直接使用 node 运行
+node dist/check-quota.js
+```
+
+---
+
+## 📋 前置要求 (Prerequisites)
+
+- **Node.js**: 需要 **18 或更高版本**。
+- **PNPM**: 包管理器（可选，但推荐）。
+- **打开 可用的 Antigravity IDE**: 必须确保 Antigravity 是正常的，账户也是正常运转，不然无法正常读取到后面的额度。
+
+## 📦 安装 (Installation)
+
+1. 克隆或下载本项目。
+2. 安装依赖：
+
+```bash
+pnpm install
+# 或
+npm install
+```
+
+## 🛠️ 构建详情
+
+本项目使用 `tsup` 将 TypeScript 脚本打包为单个最小化的 JavaScript 文件。
+
+```bash
+pnpm build
+```
+
+构建产物将输出至 `dist/check-quota.js`。
+
+## ❓ 常见问题 (Troubleshooting)
+
+- **未找到进程 (No process found)**: 请确保您的 IDE（安装了 Codeium）正在运行且未被休眠。
+- **所有候选进程均未发现端口**: 
+  - 脚本依赖 `lsof` (macOS/Linux) 或 `netstat/wmic` (Windows)。
+  - 在 macOS/Linux 上，如果遇到权限问题，可以尝试使用 `sudo pnpm start`（通常不需要）。
